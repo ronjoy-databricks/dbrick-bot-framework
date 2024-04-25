@@ -2,7 +2,11 @@
 
 Use Databricks Serving Endpoints for Prompt Engineering, RAG, and Fine tuned LLMs
 
-This bot has been created using [Bot Framework](https://dev.botframework.com), it shows how to create a simple bot that accepts input from the user and echoes it back.
+This bot has been created using [Bot Framework](https://learn.microsoft.com/en-us/azure/bot-service/bot-service-quickstart-create-bot?view=azure-bot-service-4.0&tabs=python,vs), it shows how to create a simple bot that accepts input from the user and pipes it to a Databricks Served model for securely hosted inferencing of LLMs. Use this for model optionality, querying your RAG architectures, or your fine tuned/pretrained models.
+
+The only custom code from the sample echo chatbot is the [dbrx.py](dbrx.py) file. For enterprise use, this will need to be extended and secured. 
+
+> You can easily change the model used in the dbrx.py file. It can even be specified at runtime to let the user choose between different models.
 
 ## Prerequisites
 
@@ -10,9 +14,14 @@ This sample **requires** prerequisites in order to run.
 
 ### Install Python 3.6 or greater
 
-## Using a Python Virtual Env is recommended
+### Using a Python Virtual Env is recommended
+
 
 ## Running the sample
+- Run `export DATABRICKS_TOKEN=your_token` 
+- Run `export DATABRICKS_URL=your_workspace_url` 
+  - your_workspace_url is in the format `https://{workspace-identifier}/serving-endpoints` 
+  - eg: `https://adb-984752964297111.11.azuredatabricks.net/serving-endpoints`
 - Run `pip install -r requirements.txt` to install all dependencies
 - Run `python app.py`
 
