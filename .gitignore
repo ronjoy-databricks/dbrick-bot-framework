@@ -162,3 +162,7 @@ dbrx-chat/__init__.py
 dbrx-chat/.pylintrc
 dbrx-chat/deploymentTemplates/template-with-new-rg.json
 dbrx-chat/deploymentTemplates/template-with-preexisting-rg.json
+.pylintrc
+__init__.py
+deploymentTemplates/template-with-new-rg.json
+deploymentTemplates/template-with-preexisting-rg.json
